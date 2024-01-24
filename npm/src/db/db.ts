@@ -182,6 +182,8 @@ const _new = async (options: DatabaseOption) => {
       return new DB(await mem.new(options), encryptionKey);
     case 'dynamodb':
       return new DB(await dynamodb.new(options), encryptionKey);
+    case 'custom':
+      return new DB(options.driver!, encryptionKey);
     default:
       throw new Error('unsupported db engine: ' + options.engine);
   }

@@ -374,7 +374,7 @@ export interface Encrypted {
 
 export type EncryptionKey = any;
 
-export type DatabaseEngine = 'redis' | 'sql' | 'mongo' | 'mem' | 'planetscale' | 'dynamodb';
+export type DatabaseEngine = 'redis' | 'sql' | 'mongo' | 'mem' | 'planetscale' | 'dynamodb' | 'custom';
 
 export type DatabaseType = 'postgres' | 'mysql' | 'mariadb' | 'mssql';
 
@@ -393,6 +393,7 @@ export interface DatabaseOption {
     writeCapacityUnits?: number;
   };
   manualMigration?: boolean;
+  driver?: DatabaseDriver
 }
 
 export interface JacksonOption {
