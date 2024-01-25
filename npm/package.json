@@ -1,6 +1,6 @@
 {
   "name": "@foosoftsrl/saml-jackson",
-  "version": "0.0.0",
+  "version": "0.17.0",
   "description": "SAML Jackson library",
   "keywords": [
     "SAML 2.0"
